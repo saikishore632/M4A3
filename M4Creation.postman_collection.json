@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "700d3a06-dae0-4099-b222-f39fe45685c1",
+		"name": "M4Creation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29726740"
+	},
+	"item": [
+		{
+			"name": "Get Loans",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.expect(pm.response.code).to.eq1(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/loans/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"loans",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.expect(pm.response.code).to.eq1(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\": \"Hallow Einstein\",\r\n        \"phoneNumber\": \"(998) 123-0001\",\r\n        \"address\": \"500th Street, Rose Hive Woods Colony, Maryland, 123456\",\r\n        \"loanAmount\": 900500,\r\n        \"interest\": 0.5,\r\n        \"loanTermYears\": 12,\r\n        \"loanType\": \"Barber Store Loan\",\r\n        \"description\": \"Barber Store Loan for Mary Holmes Cooper\",\r\n        \"createdDate\": \"2023-08-01\",\r\n        \"insertedDate\": \"2023-08-01\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/loans/651dd953b006413bb2803919",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"loans",
+						"651dd953b006413bb2803919"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\": \"Mary Holmes Cooper\",\r\n        \"phoneNumber\": \"(778) 123-0001\",\r\n        \"address\": \"50th Street, Rose Hive Woods Colony, Maryland, 123456\",\r\n        \"loanAmount\": 600500,\r\n        \"interest\": 0.75,\r\n        \"loanTermYears\": 1.2,\r\n        \"loanType\": \"Clothing Store Loan\",\r\n        \"description\": \"Clothing Store Loan for Mary Holmes Cooper\",\r\n        \"createdDate\": \"2023-08-05\",\r\n        \"insertedDate\": \"2023-08-05\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/loans/651dd953b006413bb2803919",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"loans",
+						"651dd953b006413bb2803919"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/loans/651de2a9b006413bb2803921",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"loans",
+						"651de2a9b006413bb2803921"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
